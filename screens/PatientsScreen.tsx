@@ -19,7 +19,6 @@ export default function PatientsScreen({ navigation }: Props) {
     <View style={styles.container}>
       <Text style={styles.title}>Gerenciamento de Pacientes</Text>
 
-      {/* Botão corrigido usando Pressable */}
       <Pressable style={styles.button} onPress={() => navigation.navigate("GerenciarPacientes")}>
         <Text style={styles.buttonText}>Gerenciar Pacientes</Text>
       </Pressable>
@@ -34,17 +33,20 @@ export default function PatientsScreen({ navigation }: Props) {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, justifyContent: "center", alignItems: "center", padding: 20 },
-  title: { fontSize: 24, fontWeight: "bold", marginBottom: 20 },
+  container: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#E3F2FD", padding: 20 },
+  title: { fontSize: 24, fontWeight: "bold", color: "#007BFF", marginBottom: 10 },
   button: {
     backgroundColor: "#007BFF",
-    padding: 12,
-    borderRadius: 8,
+    padding: 15,
+    borderRadius: 10,
+    width: "80%",
+    alignItems: "center",
     marginVertical: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 5,
   },
-  buttonText: {
-    color: "#FFF",
-    fontSize: 18,
-    textAlign: "center",
-  },
+  buttonText: { color: "#FFF", fontSize: 18, fontWeight: "bold" },
 });

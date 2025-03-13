@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, TextInput, Button, StyleSheet } from "react-native";
+import { View, TextInput, Button, StyleSheet, Text } from "react-native";
 import Footer from "../components/Footer";
 
 export default function AddTreatmentScreen() {
@@ -9,9 +9,12 @@ export default function AddTreatmentScreen() {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>Cadastro de Tratamento</Text>
+
       <TextInput style={styles.input} placeholder="Descrição" value={description} onChangeText={setDescription} />
       <TextInput style={styles.input} placeholder="Tipo" value={type} onChangeText={setType} />
       <TextInput style={styles.input} placeholder="Custo" value={cost} onChangeText={setCost} keyboardType="numeric" />
+
       <Button title="Registrar" onPress={() => alert("Tratamento cadastrado!")} />
       <Footer />
     </View>
@@ -19,6 +22,7 @@ export default function AddTreatmentScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20 },
-  input: { borderWidth: 1, padding: 10, marginBottom: 10 },
+  container: { flex: 1, padding: 20, backgroundColor: "#E3F2FD" },
+  title: { fontSize: 24, fontWeight: "bold", color: "#007BFF", marginBottom: 10, textAlign: "center" },
+  input: { borderWidth: 1, padding: 10, marginBottom: 10, backgroundColor: "#FFF", borderRadius: 10 },
 });

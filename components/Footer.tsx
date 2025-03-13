@@ -12,12 +12,13 @@ export default function Footer() {
 const styles = StyleSheet.create({
   footer: {
     position: "absolute",
-    bottom: 10,
+    bottom: 20, // Ajustado para subir um pouco mais
     width: "100%",
     alignItems: "center",
   },
   text: {
     fontSize: 14,
-    color: "#888",
+    color: "#555",
+    fontWeight: "black",
   },
 });
